@@ -1,0 +1,29 @@
+apiVersion: deploy.cloud.google.com/v1beta1
+kind: DeliveryPipeline
+metadata:
+ name: lets-rsvp
+description: main application pipeline
+serialPipeline:
+ stages:
+ - targetId: lets-rsvp-server-dev
+   profiles: []
+ - targetId: lets-rsvp-server-prod
+   profiles: []
+---
+
+apiVersion: deploy.cloud.google.com/v1beta1
+kind: Target
+metadata:
+ name: lets-rsvp-server-dev
+description: development cluster
+gke:
+ cluster: projects/lets-rsvp/locations/us-west1-a/clusters/lets-rsvp-server-dev
+---
+
+apiVersion: deploy.cloud.google.com/v1beta1
+kind: Target
+metadata:
+ name: lets-rsvp-server-prod
+description: production cluster
+gke:
+ cluster: projects/lets-rsvp/locations/us-west1-a/clusters/lets-rsvp-server

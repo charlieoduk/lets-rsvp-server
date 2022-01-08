@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: lets-rsvp
+spec:
+  containers:
+  - name: echoserver
+    image: lets-rsvp-server-image
