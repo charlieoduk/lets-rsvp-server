@@ -21,7 +21,7 @@ workflows:
     jobs:
       - build-and-test
       - gke/publish-and-rollout-image:
-          cluster: projects/lets-rsvp/locations/us-west1-a/clusters/lets-rsvp-server
+          cluster: lets-rsvp-server
           container: echoserver
           deployment: lets-rsvp-server-prod
           image: lets-rsvp-server-image
