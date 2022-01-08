@@ -22,7 +22,7 @@ workflows:
       - build-and-test
       - gke/publish-and-rollout-image:
           cluster: lets-rsvp-server
-          container: echoserver
+          container: lets-rsvp
           deployment: lets-rsvp-server-prod
           image: lets-rsvp-server-image
           tag: $CIRCLE_SHA1
