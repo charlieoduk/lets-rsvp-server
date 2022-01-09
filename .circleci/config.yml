@@ -23,7 +23,7 @@ workflows:
       - gke/create-cluster:
           cluster: lets-rsvp-server-prod
       - gke/publish-and-rollout-image:
-          cluster: lets-rsvp-server
+          cluster: lets-rsvp-server-prod
           container: lets-rsvp-server-image
           deployment: lets-rsvp-server-prod
           namespace: lets-rsvp-server-prod
